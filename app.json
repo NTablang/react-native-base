@@ -13,14 +13,45 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hanson.react-native-base",
+      "associatedDomains": [
+        "webcredentials:app.beta.usecapsule.com?mode=developer",
+        "webcredentials:app.usecapsule.com"
+      ]
     },
+    
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+        
+      },
+      "package": "com.hanson.react_native_base",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "app.beta.usecapsule.com",
+              "pathPrefix": "/.well-known/assetlinks.json"
+            },
+            {
+              "scheme": "https",
+              "host": "app.usecapsule.com",
+              "pathPrefix": "/.well-known/assetlinks.json"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
     },
+  
     "web": {
       "bundler": "metro",
       "output": "static",
